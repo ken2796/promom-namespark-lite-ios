@@ -60,35 +60,6 @@ UI was tested on simulator to confirm AI-generated layouts rendered correctly
 Any AI suggestion involving architecture or patterns was cross-checked against Apple's official documentation
 
 
-✏️ Where AI Output Was Rewritten or Rejected
-AI SuggestionAction TakenReasonGeneric ViewController with no separation of concernsRewrittenRefactored into ViewModel to follow MVVMForce-unwrapped optionals (!) in generated codeRewrittenReplaced with safe guard let / if let unwrappingOverly verbose test namingEditedRenamed tests to follow test_<method>_<condition>_<expectedResult> conventionSuggested using a third-party networking libraryRejectedUsed URLSession directly to keep dependencies minimalAuto-generated comments that stated the obviousRejectedRemoved noise; kept only meaningful documentation
-
-🔧 What I Would Refactor Next
-
-Extract networking into a dedicated service layer – Currently mixed with view logic
-Add dependency injection – Makes unit testing easier and reduces tight coupling
-Implement proper error types – Replace generic Error with a typed AppError enum
-Add Coordinator pattern – Navigation logic is currently inside view controllers
-Set up CI/CD – GitHub Actions for automated build and test on pull requests
-Increase test coverage – Add integration tests and UI tests with XCUITest
-Add environment configuration – Separate dev / staging / production configs
-
-
-⏭️ Skipped Tasks & Reasons
-Skipped TaskReasonOffline/cache supportOut of scope for the starter; requires CoreData or a caching strategyFull accessibility supportTime constraint; VoiceOver labels and Dynamic Type were deprioritizedDark mode polishBasic system colors used; custom dark mode assets not createdLocalizationSingle-language app; internationalization deferred to a future sprintAnalytics / loggingNo analytics SDK integrated; would add Firebase or similar in productionFull test suiteOnly targeted tests written; comprehensive coverage requires more time
-
-📁 Project Structure
-ios/
-├── ProMomStarter/
-│   ├── Models/
-│   ├── Views/
-│   ├── ViewModels/
-│   └── Resources/
-├── ProMomStarterTests/
-│   └── (Unit Tests)
-├── ProMomStarter.xcodeproj
-└── README.md
-
 🔗 Submission Links
 
 Repository URL: https://github.com/ken2796/promom-namespark-lite-ios
