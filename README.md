@@ -12,7 +12,9 @@ A starter iOS project submitted as a take-home assignment. This document covers 
 Requirements
 ToolVersionXcode15.0 or lateriOS Deployment TargetiOS 16.0+macOSVentura 13.0+Swift5.9+
 Steps
-bash# 1. Clone the repository
+bash# 
+
+1. Clone the repository
 git clone https://github.com/ken2796/promom-namespark-lite-ios.git
 cd promom-namespark-lite-ios
 
